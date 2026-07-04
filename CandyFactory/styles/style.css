@@ -1,0 +1,403 @@
+
+/*
+Main Background #FEEBF1
+Slight Lighter areas #FEEAF1
+Top Header gradient #FEE0E9
+Hero Section Background #FEEBF1
+Lightest Highlight #FEF4F7
+
+Header font-family: "Anton", sans-serif;
+paragraph font-family: "Patrick Hand", cursive;
+others font-family: "Open Sans", sans-serif;
+color: #333333;
+font-size: 20px;
+line-height: 1.5;
+
+
+*/
+
+
+p {
+    font-family: "Patrick Hand", cursive;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: #FEE0E9;
+    color: #333;
+    line-height: 1.5;
+
+    background-image: url("../images/candybanner.png");
+    background-repeat: no-repeat;
+    background-position: right 200px;
+    background-size: 950px auto;
+    background-attachment: fixed;
+    
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: url("../images/candyfactorycastle1.png") center/cover no-repeat;
+
+    opacity: 0.4;      /* Change this value */
+    z-index: -1;
+    background-position: left 200px;
+    background-size: contain;
+}
+
+
+/* =========================
+   WRAPPER
+========================= */
+.wrap {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+#topMenu {
+    background: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+
+#topMenu .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* H1 LOGO */
+.logo h1 {
+    font-family: "Patrick Hand", cursive;
+    font-size: 28px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: 1px;
+
+    /* IMPORTANT: lifts text slightly so it visually sits above curve */
+    transform: translateY(6px);
+}
+
+/* REMOVE LINK DEFAULT STYLE */
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* SVG LINE */
+.logo svg {
+    display: block;
+    margin-top: -2px; /* pulls line closer to text */
+}
+
+/* =========================
+   NAV MENU
+========================= */
+#topLinks ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+#topLinks a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#topLinks a:hover {
+    color: #FD3C82;
+}
+
+/* =========================
+   ICONS
+========================= */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.icons a:hover {
+    color: #FD3C82;
+}
+
+
+/* =============
+Top Menu Language
+================ */
+.language-switcher {
+    position: relative;
+}
+
+.language-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.language-btn:hover {
+    color: #FD3C82;
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.language-menu.show {
+    display: block;
+}
+
+.language-menu a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: .2s;
+}
+
+.language-menu a:hover {
+    background: #FEEBF1;
+    color: #FD3C82;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+    main .wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #topMenu .wrap {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #topLinks ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+main .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+    gap: 40px;
+}
+
+
+/* ================
+Left Column Shop
+=================== */
+.leftColumn {
+    flex: 1;
+}
+
+
+.highlight {
+    color: #FD3C82;
+}
+
+.leftColumn .text h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.leftColumn .text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* ============
+ BUTTON 
+ ============== */
+.shop-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #FD3C82;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.shop-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(253, 60, 130, 0.35);
+}
+
+/* ================
+Right Column
+Promotion Section
+=================== */
+.rightColumn {
+    flex: 1;
+    text-align: center;
+}
+
+.rightColumn img {
+    width: 100%;
+    max-width: 450px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px;
+    background: transparent;
+}
+
+
+.slide.active {
+    display: flex;
+}
+
+.slide img {
+    width: 45%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+.promo-text {
+    width: 55%;
+}
+
+.promo-text h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.promo-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,.05);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.prev {
+    left: 0px;
+}
+
+.next {
+    right: 0px;
+}
+
+.prev:hover,
+.next:hover {
+    background: #FD3C82;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+
+
